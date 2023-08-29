@@ -4,17 +4,250 @@
     border: 1px solid black;
 }
 
-nav {
-    width: 1728px;
-    height: 173px;
+body {
+    width: 99.5vw;
 }
 
+nav {
+    width: 100%;
+    height: 86px;
+}
+nav img{
+    width: 50px;
+    height: 50px;
+    margin-top: 21px;
+    margin-left: 37px;
+
+}
 ul {
-    width: 790px;
     height: 20px;
     float: right;
+    margin-top: 38px;
 }
 
 li {
     display: inline;
+    margin: 0 23px;
+    font-family: 'Montserrat';
+}
+
+#slide1 {
+    background-image: url('./Resources/WhatsApp\ Image\ 2023-08-16\ at\ 12.01\ 1.png');
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+}
+
+.sliderwrapper h1 {
+    font-family: 'Montserrat';
+    width: 400px;
+    height: 85px;
+    color: #ffffff;
+    font-size: 35px;
+    line-height: 43px;
+    font-weight: 700;
+    margin-top: 168px;
+    margin-left: 80px;
+}
+.sliderwrapper h1 span{
+    color: #E479F3;
+}
+
+.sliderwrapper p {
+    font-family: 'Montserrat';
+    height: 12px;
+    color: #ffffff;
+    margin-top: 16px;
+    margin-left: 80px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.sliderwrapper a {
+    margin-left: 80px;
+    margin-top: 26px;
+    display: inline-block;
+}
+
+.sliderwrapper button {
+    background-color: #E479F3;
+    color: #000000;
+    width: 118px;
+    height: 30px;
+    font-size: 10px;
+    border: none;
+    border-radius: 20px;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    background-color: #0000007f;
+}
+
+.aboutus h6 {
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 37px;
+    font-family: 'Monteserrat';
+    font-style: italic;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.aboutus h2 {
+    width: fit-content;
+    margin: 8px auto;
+    font-family: 'Monteserrat';
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.longline {
+    width: 133px;
+    border: 1.5px solid #E479F3;
+    margin: 0 auto;
+}
+
+.shortline {
+    width: 62px;
+    border: 1.5px solid #E479F3;
+    margin: 0 auto;
+    margin-top: 4px;
+}
+
+.mothercard {
+    width: 791px;
+    height: 343px;
+    margin: 13px auto;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+
+.card {
+    width: 246px;
+    height: 343px;
+}
+#cardimage1, #cardimage2, #cardimage3 {
+    background-size: cover;
+    height: 162px;
+    width: 246px;
+}
+#cardimage1{
+    background-image: url('./Resources/image\ 1.png');
+}
+#cardimage2{
+    background-image: url('./Resources/image\ 2.png');
+}
+#cardimage3{
+    background-image: url('./Resources/excursion.png');
+}
+.card h6 {
+    font-family: 'Monteserrat';
+    margin-top: 27px;
+    font-style: normal;
+    text-align: center;    
+}
+.card p {
+    font-size: 10px;
+    text-align: center;
+    width: 184px;
+    height: 80px;
+    margin: 0 auto;
+    margin-top: 12.5px;
+    color: #212121;
+}
+#WelcomeAddress{
+    width: 1177px;
+    padding: 0px 42px;
+    margin: 0 auto;
+
+}
+#WelcomeAddress article{
+    width: 63%;
+    height: 370px;
+    font-size: 12px;
+    display: inline-block;
+    margin-top: 45px;
+}
+#WelcomeAddress img{
+    width: 31%;
+    display: inline-block;
+
+}
+#flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 63px;
+}
+#facilities{
+    width: 1177px;
+    margin: 0 auto;
+    margin-top: 85px;
+    text-align: center;
+    font-family: 'Montserrat';
+    
+}
+#facilities h6 {
+    font-weight: 500;
+    font-size: 12px;
+    font-style: italic;
+}
+#facilities h3 {
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 8px;
+}
+
+.motherlab {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 91px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.labcard {
+    width:373px ;
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+}
+
+.computerlab  {
+    background-image: url("./Resources/computer\ lab.png");
+    height: 100%;
+    width: 210px;
+    background-size: cover;
+}
+
+.sciencelab {
+    background-image: url("./Resources/science\ lab.png");
+    height: 100%;
+    width: 210px;
+    background-size: cover;
+}
+
+.labcardtextbox{
+    height: 100%;
+    width: 163px;
+    background-color: #EEF3F6;
+}
+.labcardtextbox p{
+    margin-top: 37px;
+    font-size: 12px;
+    font-family: 'Montserrat';
+    font-weight: 500;
+}
+.labcardtextbox article{
+    font-size: 10px;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    width: 144px;
+    margin: 0 auto;
+    margin-top: 13px;
 }
