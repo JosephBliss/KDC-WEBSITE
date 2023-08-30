@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    border: 1px solid black;
+    border: 1px solid transparent;
 }
 
 body {
@@ -129,6 +129,8 @@ li {
 .card {
     width: 246px;
     height: 343px;
+    border: 1px solid #b6b6b6;
+    background-color: #f9f9f9;
 }
 #cardimage1, #cardimage2, #cardimage3 {
     background-size: cover;
@@ -165,6 +167,11 @@ li {
     margin: 0 auto;
 
 }
+#WelcomeAddress h2{
+     font-family: "Montserrat";
+}
+
+
 #WelcomeAddress article{
     width: 63%;
     height: 370px;
@@ -250,4 +257,28 @@ li {
     width: 144px;
     margin: 0 auto;
     margin-top: 13px;
+}
+#facilities button{
+    background-color: #E479F3;
+    width: 118px;
+    height: 30px;
+    border-radius: 20px;
+    margin-top: 40px;
+    font-family: "Montserrat";
+    font-weight: 400;
+    margin-bottom: 28px;
+
+}
+#Testimonials{
+    width: 1177px;
+    background-color: #4a4a4a;
+    margin: 0 auto;
+}
+#Testimonials p{
+ color: #ffffff;
+ width: fit-content;
+ margin: 0 auto;
+ font-family: 'Montserrat';
+ font-size: 12px;
+ font-style: italic;
 }
