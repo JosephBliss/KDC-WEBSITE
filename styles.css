@@ -282,3 +282,95 @@ li {
  font-size: 12px;
  font-style: italic;
 }
+#Testimonials h3{
+    width: fit-content;
+    height: 22px;
+    margin: 0 auto;
+    margin-top: 13px;
+    color: #ffffff;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 18px;
+}
+.MTestimonialcards{
+    margin: 0 auto;
+    margin-top: 27px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+}
+.Testimonialcard{
+    width: 239px;
+    height: 382px;
+    background-color: #ffffff;
+
+}
+.Testimonialcard .circle{
+    margin: 0 auto;
+    margin-top: 48px;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: #D9D9D9;
+
+}
+.MTestimonialcards .Testimonialcard p#comment{
+    margin: 0 auto;
+    margin-top: 44px;
+    width: 178px;
+    text-align: center;
+    color: #212121;
+    font-style: italic;
+    font-family: 'Montserrat';
+    line-height: 16px;
+}
+.MTestimonialcards .Testimonialcard img {
+    display: block;
+    width: 140px;
+    height: 20px;
+    margin: 0 auto;
+    margin-top: 65px;
+}
+#Exams{
+    width: 1177px;
+    margin: 0 auto;
+    margin-top: 54px;
+}
+#Exams h3{
+    font-family: 'Montserrat';
+    width: fit-content;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 auto;
+}
+#Exams .examlogos {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    justify-content: center;
+    margin-top: 28px;
+    gap: 240px;
+    margin-bottom: 34px;
+}
+#Exams .examlogos .logo{
+    height: 112px;
+    width: 112px;
+    background-size: cover;
+
+
+
+}
+#logo1{
+    background-image: url('./Resources/waec.png');
+}
+#logo2{
+    background-image: url('./Resources/Neco.png');
+
+}
+#logo3{
+    background-image: url('./Resources/Jamb.png');
+}
+#logo4{
+    background-image: url('./Resources/Junior\ waec.png');
+}
