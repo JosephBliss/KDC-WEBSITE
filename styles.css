@@ -25,16 +25,48 @@ ul {
     margin-top: 38px;
 }
 
+nav ul a {
+    text-decoration: none;
+    color: #000000;
+}
+nav ul a:hover{
+    color:#E479F3;
+    text-decoration:underline; 
+}
+
+
 li {
     display: inline;
     margin: 0 23px;
     font-family: 'Montserrat';
 }
 
+.slidercontainer {
+    margin: 0 auto;
+}
+
+.sliderwrapper {
+    position: relative;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.slider {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.slidercontainer .slider .slides {
+    width: 2000px;
+}
+
 #slide1 {
     background-image: url('./Resources/WhatsApp\ Image\ 2023-08-16\ at\ 12.01\ 1.png');
     background-size: cover;
-    width: 100%;
     height: 400px;
 }
 
@@ -373,4 +405,53 @@ li {
 }
 #logo4{
     background-image: url('./Resources/Junior\ waec.png');
+}
+
+footer {
+    width: 1177px;
+    background-color: #212121;
+    margin: 0 auto;
+}
+
+footer .links {
+    margin-top: 33px;
+    margin-left: 46px;
+}
+
+footer .links h3 {
+    font-size: 18px;
+    font-family: "Montserrat";
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 24px;
+}
+
+footer .links img {
+    width: 15px;
+    height: 15px;
+    margin-right: 17px;
+}
+
+footer .links p {
+    color: #ffffff;
+    display: inline-block;
+    font-size: 12px;
+    font-family: "Montserrat";
+    margin-bottom: 22px;
+}
+
+.developers {
+    font-family: "Montserrat";
+    font-size: 10px;
+    font-style: italic;
+    margin-left: 46px;
+    color: #ffffff;
+}
+
+.copyright {
+    width: fit-content;
+    margin: 0 auto;
+    color: #ffffff;
+    font-size: 12px;
+    margin-top: 91px;
 }
