@@ -23,9 +23,11 @@
     </nav>
     <main>
       <div class="slidercontainer">
-        <div class="sliderwrapper">
-          <div class = 'slider'>
-            <div id="slide1">
+        <div class="sliderwrapper"> 
+          <div class = 'slider' id="sliderid">
+            <button id = 'left'><</button>
+            <button id= 'right'>></button>
+            <div id="slide1" class = 'slides'>
               <div class='overlay'>
                 <h1>
                   WELCOME TO <br />
@@ -198,4 +200,22 @@ Principal, King David College
     </footer>
     </main>
   </body>
+  <script type="text/javascript">
+    document.getElementById("right").addEventListener("click", ()=>{
+      document.getElementById("sliderid").scrollBy({
+        top: 0,
+        left: 1177,
+        scrollBehavior: "smooth"
+
+      })
+    })
+
+    document.getElementById("left").addEventListener("click", ()=>{
+      document.getElementById("sliderid").scrollBy({
+        top: 0,
+        left:-1177,
+        scrollBehavior: "smooth"
+      })
+    })
+  </script>
 </html>

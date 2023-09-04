@@ -54,20 +54,45 @@ li {
 .slider {
     display: flex;
     flex-direction: row;
-    width: 100%;
-    overflow-x: scroll;
+    width: 1177px;
+    overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
+    margin: 0 auto;
+    border: 3px solid red;
 }
 
+.slider::-webkit-scrollbar {
+    display: none;
+}
+.slider button{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-color: #2b2d2c;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 1.5em;
+    font-weight: lighter;
+}
+.slider button#left{
+    top: 50%;
+    transform: translateY(-50%);
+   left: 100px;
+}
+.slider button#right{
+    top: 50%;
+    transform: translateY(-50%);
+    right: 100px;
+}
 .slidercontainer .slider .slides {
-    width: 2000px;
+    height: 400px;
+    width: inherit;
 }
 
 #slide1 {
     background-image: url('./Resources/WhatsApp\ Image\ 2023-08-16\ at\ 12.01\ 1.png');
     background-size: cover;
-    height: 400px;
 }
 
 .sliderwrapper h1 {
@@ -101,7 +126,7 @@ li {
     display: inline-block;
 }
 
-.sliderwrapper button {
+.sliderwrapper .slides button {
     background-color: #E479F3;
     color: #000000;
     width: 118px;
@@ -113,7 +138,7 @@ li {
 
 .overlay {
     height: 100%;
-    width: 100%;
+    width: inherit;
     background-color: #0000007f;
 }
 
