@@ -40,117 +40,33 @@ li {
     margin: 0 23px;
     font-family: 'Montserrat';
 }
-
-.slidercontainer {
-    margin: 0 auto;
-}
-
-.sliderwrapper {
-    position: relative;
-    margin: 0 auto;
+.contactus {
+    border: 1px solid black;
     width: 1177px;
+    height: 100px;
+    top: 76px;
 }
-
-.slider {
-    display: flex;
-    flex-direction: row;
+.banner{
     width: 1177px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
+    height: 600px;
+    background-image: url('../Resources/WhatsApp\ Image\ 2023-08-16\ at\ 12.01\ 1.png');
+    background-size: cover;
     margin: 0 auto;
 }
-
-.slider::-webkit-scrollbar {
-    display: none;
-}
-.sliderwrapper button.arrow{
-    position: absolute;
-    width: 35px;
-    height: 35px;
-    background-color: #2b2d2c;
-    border-radius: 5px;
-    color: #ffffff;
-    font-size: 1.5em;
-    font-weight: lighter;
-}
-.sliderwrapper button#left{
-    top: 50%;
-    transform: translateY(-50%);
-   left: 16px;
-}
-.sliderwrapper button#right{
-    top: 50%;
-    transform: translateY(-50%);
-    right: 16px;
-}
-.slidercontainer .slider .slides {
-    height: 400px;
+.banner .overlay{
     width: inherit;
-}
-
-#slide1 {
-    background-image: url('./Resources/WhatsApp\ Image\ 2023-08-16\ at\ 12.01\ 1.png');
-    background-size: cover;
-}
-
-#slide2 {
-    background-image: url('./Resources/PRIMARY\ 1.png');
-    background-size: cover;
-}
-
-#slide3 {
-    background-image: url('./Resources/LAPTOP\ 1.png');
-    background-size: cover;
-}
-
-.sliderwrapper h1 {
-    font-family: 'Montserrat';
-    width: 420px;
-    height: 85px;
-    color: #ffffff;
-    font-size: 35px;
-    line-height: 43px;
-    font-weight: 700;
-    margin-top: 168px;
-    margin-left: 80px;
-}
-.sliderwrapper h1 span{
-    color: #E479F3;
-}
-
-.sliderwrapper p {
-    font-family: 'Montserrat';
-    height: 12px;
-    color: #ffffff;
-    margin-top: 16px;
-    margin-left: 80px;
-    font-size: 12px;
-    font-weight: 500;
-}
-
-.sliderwrapper a {
-    margin-left: 80px;
-    margin-top: 26px;
-    display: inline-block;
-}
-
-.sliderwrapper .slides button {
-    background-color: #E479F3;
-    color: #000000;
-    width: 118px;
-    height: 30px;
-    font-size: 10px;
-    border: none;
-    border-radius: 20px;
-}
-
-.overlay {
-    height: 100%;
-    width: inherit;
+    height: inherit;
     background-color: #0000007f;
 }
-
+.banner .overlay h1{
+    color: #ffffff;
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size:50px;
+    margin: 0 auto;
+    width: fit-content;
+    margin-top: 200px;
+}
 .aboutus h6 {
     width: fit-content;
     margin: 0 auto;
