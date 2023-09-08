@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./styles.css" />
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900|Ubuntu:400,500,700" rel="stylesheet" />
   <title>King David College</title>
 </head>
 
@@ -33,8 +33,8 @@
   <main>
     <div class="slidercontainer">
       <div class="sliderwrapper">
-        <button id='left' class="arrow"><</button>
-            <button id='right' class="arrow">></button>
+        <button id='left' class="arrow"><img src="./Resources/arrowleft.png" alt=""></button>
+            <button id='right' class="arrow"><img src="./Resources/arrowright.png" alt=""></button>
             <div class='slider' id="sliderid">
 
               <div id="slide1" class='slides'>
@@ -75,7 +75,6 @@
                   <a href=""><button>Learn More</button></a>
                 </div>
               </div>
-              <div id="slide4" class="slides"></div>
             </div>
       </div>
     </div>
@@ -113,7 +112,7 @@
       <h2>A Welcome Address<br>From the Principal</h2>
       <div id="flex">
         <article>
-          Welcome to King David College/Cot Website!
+          Welcome to King David College/Cot Website! <br><br>
 
           Dear Students, Parents, Teachers, and Visitors,<br><br>
 
@@ -263,7 +262,7 @@
   document.getElementById("right").addEventListener("click", () => {
     document.getElementById("sliderid").scrollBy({
       top: 0,
-      left: 1177,
+      left: screen.width,
       scrollBehavior: "smooth"
 
     })
@@ -272,7 +271,7 @@
   document.getElementById("left").addEventListener("click", () => {
     document.getElementById("sliderid").scrollBy({
       top: 0,
-      left: -1177,
+      left: -screen.width,
       scrollBehavior: "smooth"
     })
   })

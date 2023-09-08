@@ -10,19 +10,26 @@ body {
 
 nav {
     width: 100%;
-    height: 86px;
+    height: 145px;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    background-color: white;
+    border-bottom: 2px solid #E479F3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 nav img{
-    width: 50px;
-    height: 50px;
-    margin-top: 21px;
+    width: 88px;
+    height: 88px;
     margin-left: 37px;
 
 }
 ul {
     height: 20px;
-    float: right;
-    margin-top: 38px;
+    margin-left: auto;
+    width: fit-content;
 }
 
 nav ul a {
@@ -39,26 +46,31 @@ li {
     display: inline;
     margin: 0 23px;
     font-family: 'Montserrat';
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .slidercontainer {
     margin: 0 auto;
+    margin-top: 145px;
+    width: 100%;
 }
 
 .sliderwrapper {
     position: relative;
     margin: 0 auto;
-    width: 1177px;
+    width: 100%;
 }
 
 .slider {
+    width: 100%;
     display: flex;
     flex-direction: row;
-    width: 1177px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     margin: 0 auto;
+    border-top: 2px solid #E479F3;
 }
 
 .slider::-webkit-scrollbar {
@@ -66,8 +78,11 @@ li {
 }
 .sliderwrapper button.arrow{
     position: absolute;
-    width: 35px;
-    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 59px;
+    height: 59px;
     background-color: #2b2d2c;
     border-radius: 5px;
     color: #ffffff;
@@ -77,16 +92,24 @@ li {
 .sliderwrapper button#left{
     top: 50%;
     transform: translateY(-50%);
-   left: 16px;
+   left: 48px;
 }
 .sliderwrapper button#right{
     top: 50%;
     transform: translateY(-50%);
-    right: 16px;
+    right: 48px;
+}
+
+.sliderwrapper button img {
+    width: 50%;
+    height: 50%;
+    background-size: contain;
 }
 .slidercontainer .slider .slides {
-    height: 400px;
-    width: inherit;
+    height: 677px;
+    width: 100%;
+    scroll-snap-align: center;
+    flex-shrink: 0;
 }
 
 #slide1 {
@@ -106,14 +129,14 @@ li {
 
 .sliderwrapper h1 {
     font-family: 'Montserrat';
-    width: 420px;
-    height: 85px;
+    width: 837px;
+    height: 170px;
     color: #ffffff;
-    font-size: 35px;
-    line-height: 43px;
+    font-size: 70px;
+    line-height: 85px;
     font-weight: 700;
-    margin-top: 168px;
-    margin-left: 80px;
+    margin-top: 253px;
+    margin-left: 135px;
 }
 .sliderwrapper h1 span{
     color: #E479F3;
@@ -121,51 +144,50 @@ li {
 
 .sliderwrapper p {
     font-family: 'Montserrat';
-    height: 12px;
     color: #ffffff;
-    margin-top: 16px;
-    margin-left: 80px;
-    font-size: 12px;
+    margin-top: 29px;
+    margin-left: 135px;
+    font-size: 20px;
     font-weight: 500;
 }
 
 .sliderwrapper a {
-    margin-left: 80px;
-    margin-top: 26px;
+    margin-left: 135px;
+    margin-top: 42px;
     display: inline-block;
 }
 
 .sliderwrapper .slides button {
     background-color: #E479F3;
     color: #000000;
-    width: 118px;
-    height: 30px;
-    font-size: 10px;
+    width: 199px;
+    height: 50px;
+    font-size: 20px;
     border: none;
-    border-radius: 20px;
+    border-radius: 50px;
 }
 
-.overlay {
+.slides .overlay {
     height: 100%;
-    width: inherit;
+    width: 100%;
     background-color: #0000007f;
 }
 
 .aboutus h6 {
     width: fit-content;
     margin: 0 auto;
-    margin-top: 37px;
-    font-family: 'Monteserrat';
+    margin-top: 54px;
+    font-family: 'Montserrat';
     font-style: italic;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 500;
 }
 
 .aboutus h2 {
     width: fit-content;
-    margin: 8px auto;
-    font-family: 'Monteserrat';
-    font-size: 26px;
+    margin: 9px auto;
+    font-family: 'Montserrat';
+    font-size: 32px;
     font-weight: 700;
 }
 
@@ -183,9 +205,9 @@ li {
 }
 
 .mothercard {
-    width: 791px;
-    height: 343px;
-    margin: 13px auto;
+    width: fit-content;
+    height: fit-content;
+    margin: 22px auto;
     display: flex;
     flex-direction: row;
     gap: 25px;
@@ -193,15 +215,15 @@ li {
 
 
 .card {
-    width: 246px;
-    height: 343px;
+    width: 408px;
+    height: 578px;
     border: 1px solid #b6b6b6;
     background-color: #f9f9f9;
 }
 #cardimage1, #cardimage2, #cardimage3 {
     background-size: cover;
-    height: 162px;
-    width: 246px;
+    height: 272px;
+    width: inherit;
 }
 #cardimage1{
     background-image: url('./Resources/image\ 1.png');
@@ -213,18 +235,22 @@ li {
     background-image: url('./Resources/excursion.png');
 }
 .card h6 {
-    font-family: 'Monteserrat';
-    margin-top: 27px;
+    font-family: 'Montserrat';
+    margin-top: 45px;
     font-style: normal;
-    text-align: center;    
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;    
 }
 .card p {
-    font-size: 10px;
+    font-size: 16px;
+    font-family: "Montserrat";
     text-align: center;
-    width: 184px;
-    height: 80px;
+    font-weight: 400;
+    width: 304px;
+    height: 180px;
     margin: 0 auto;
-    margin-top: 12.5px;
+    margin-top: 21px;
     color: #212121;
 }
 #WelcomeAddress{
@@ -236,6 +262,7 @@ li {
 }
 #WelcomeAddress h2{
      font-family: "Montserrat";
+     font-size: 32px;
      width: fit-content;
      margin: 0 auto;
      color: #E479F3;
@@ -244,10 +271,9 @@ li {
 
 #WelcomeAddress article{
     width: 63%;
-    height: 370px;
-    font-size: 12px;
+    height: fit-content;
+    font-size: 16px;
     display: inline-block;
-    margin-top: 45px;
 }
 #WelcomeAddress img{
     width: 31%;
@@ -255,112 +281,118 @@ li {
 
 }
 #flex {
+    margin-top: 50px;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     gap: 63px;
 }
 #facilities{
     width: 1177px;
     margin: 0 auto;
-    margin-top: 85px;
+    margin-top: 101px;
     text-align: center;
     font-family: 'Montserrat';
     
 }
 #facilities h6 {
     font-weight: 500;
-    font-size: 12px;
+    font-size: 20px;
     font-style: italic;
 }
 #facilities h3 {
     font-weight: 700;
-    font-size: 18px;
-    margin-top: 8px;
+    font-size: 32px;
+    margin-top: 9px;
 }
 
 .motherlab {
-    width: 100%;
+    width: fit-content;
     display: flex;
     flex-direction: row;
-    gap: 91px;
+    gap: 52px;
     justify-content: center;
-    margin-top: 30px;
+    margin: 0 auto;
+    margin-top: 51px;
 }
 
 .labcard {
-    width:373px ;
-    height: 250px;
+    width: 470px;
+    height: 315px;
     display: flex;
     flex-direction: row;
+    flex-shrink: 0;
 }
 
 .computerlab  {
     background-image: url("./Resources/computer\ lab.png");
     height: 100%;
-    width: 210px;
+    width: 265px;
     background-size: cover;
 }
 
 .sciencelab {
     background-image: url("./Resources/science\ lab.png");
     height: 100%;
-    width: 210px;
+    width: 265px;
     background-size: cover;
 }
 
 .labcardtextbox{
     height: 100%;
-    width: 163px;
+    width: 205px;
     background-color: #EEF3F6;
 }
 .labcardtextbox p{
     margin-top: 37px;
-    font-size: 12px;
+    font-size: 20px;
     font-family: 'Montserrat';
-    font-weight: 500;
+    font-weight: 700;
 }
 .labcardtextbox article{
-    font-size: 10px;
+    font-size: 14px;
     font-family: 'Montserrat';
     font-weight: 400;
-    width: 144px;
+    width: 90%;
     margin: 0 auto;
     margin-top: 13px;
+    text-align: left;
 }
 #facilities button{
     background-color: #E479F3;
-    width: 118px;
-    height: 30px;
-    border-radius: 20px;
-    margin-top: 40px;
+    width: 200px;
+    height: 50px;
+    border-radius: 50px;
+    margin-top: 58px;
     font-family: "Montserrat";
+    font-size: 16px;
     font-weight: 400;
-    margin-bottom: 28px;
+    margin-bottom: 47px;
 
 }
 #Testimonials{
-    width: 1177px;
+    width: 100%;
     background-color: #4a4a4a;
-    margin: 0 auto;
 }
 #Testimonials p{
  color: #ffffff;
  width: fit-content;
  margin: 0 auto;
+ margin-top: 64px;
  font-family: 'Montserrat';
- font-size: 12px;
+ font-size: 20px;
  font-style: italic;
+ font-weight: 500;
 }
 #Testimonials h3{
     width: fit-content;
-    height: 22px;
+    height: fit-content;
     margin: 0 auto;
-    margin-top: 13px;
+    margin-top: 18px;
     color: #ffffff;
     font-family: 'Montserrat';
     font-weight: 700;
-    font-size: 18px;
+    font-size: 32px;
 }
 .MTestimonialcards{
     margin: 0 auto;
@@ -369,11 +401,11 @@ li {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 100px;
+    gap: 39px;
 }
 .Testimonialcard{
-    width: 239px;
-    height: 432px;
+    width: 402px;
+    height: 794px;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -382,8 +414,8 @@ li {
 .Testimonialcard .circle{
     margin: 0 auto;
     margin-top: 48px;
-    width: 75px;
-    height: 75px;
+    width: 126px;
+    height: 126px;
     border-radius: 50%;
     background-color: #D9D9D9;
     background-size: cover;
@@ -403,47 +435,48 @@ li {
 }
 .MTestimonialcards .Testimonialcard p#comment{
     margin: 0 auto;
-    margin-top: 44px;
-    width: 216px;
+    margin-top: 22px;
+    width: 363px;
     text-align: center;
     color: #212121;
     font-style: italic;
     font-family: 'Montserrat';
-    line-height: 16px;
-    font-size: 8px;
+    line-height: 24px;
+    font-size: 16px;
 }
 .MTestimonialcards .Testimonialcard img {
     display: block;
-    width: 140px;
-    height: 20px;
+    width: 235px;
+    height: 34px;
     margin: 0 auto;
-    justify-self: flex-end;
+    margin-top: auto;
+    margin-bottom: 54px;
 }
 #Exams{
-    width: 1177px;
-    margin: 0 auto;
-    margin-top: 54px;
+    width: 100%;
 }
 #Exams h3{
     font-family: 'Montserrat';
     width: fit-content;
-    font-size: 18px;
+    font-size: 32px;
     font-weight: 700;
     margin: 0 auto;
+    margin-top: 113px;
 }
 #Exams .examlogos {
     display: flex;
     flex-direction: row;
     margin: 0 auto;
     justify-content: center;
-    margin-top: 28px;
+    margin-top: 45px;
     gap: 240px;
-    margin-bottom: 34px;
+    margin-bottom: 57px;
 }
 #Exams .examlogos .logo{
-    height: 112px;
-    width: 112px;
-    background-size: cover;
+    height: 189px;
+    width: 189px;
+    background-size: contain;
+    background-repeat:no-repeat;
 
 
 
@@ -463,18 +496,18 @@ li {
 }
 
 footer {
-    width: 1177px;
+    width: 100%;
     background-color: #212121;
     margin: 0 auto;
 }
 
 footer .links {
     margin: 0 auto;
-    margin-top: 33px;
+    margin-top: 77px;
     display: flex;
     flex-direction: row;
     width: fit-content;
-    gap: 136px;
+    gap: 180px;
 }
 
 footer .badge {
