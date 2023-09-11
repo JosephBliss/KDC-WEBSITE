@@ -5,12 +5,12 @@
 }
 
 body {
-    width: 99.5vw;
+    width: 100%;
 }
 
 nav {
     width: 100%;
-    height: 145px;
+    height: 109px;
     position: fixed;
     top: 0;
     z-index: 2;
@@ -24,7 +24,6 @@ nav img{
     width: 88px;
     height: 88px;
     margin-left: 37px;
-
 }
 ul {
     height: 20px;
@@ -52,7 +51,7 @@ li {
 
 .slidercontainer {
     margin: 0 auto;
-    margin-top: 145px;
+    margin-top: 109px;
     width: 100%;
 }
 
@@ -81,8 +80,8 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 59px;
-    height: 59px;
+    width: 45px;
+    height: 45px;
     background-color: #2b2d2c;
     border-radius: 5px;
     color: #ffffff;
@@ -92,7 +91,7 @@ li {
 .sliderwrapper button#left{
     top: 50%;
     transform: translateY(-50%);
-   left: 48px;
+    left: 48px;
 }
 .sliderwrapper button#right{
     top: 50%;
@@ -106,7 +105,7 @@ li {
     background-size: contain;
 }
 .slidercontainer .slider .slides {
-    height: 677px;
+    height: 508px;
     width: 100%;
     scroll-snap-align: center;
     flex-shrink: 0;
@@ -130,13 +129,13 @@ li {
 .sliderwrapper h1 {
     font-family: 'Montserrat';
     width: 837px;
-    height: 170px;
+    height: 130px;
     color: #ffffff;
-    font-size: 70px;
-    line-height: 85px;
+    font-size: 50px;
+    line-height: 62px;
     font-weight: 700;
-    margin-top: 253px;
-    margin-left: 135px;
+    margin-top: 190px;
+    margin-left: 100px;
 }
 .sliderwrapper h1 span{
     color: #E479F3;
@@ -145,30 +144,30 @@ li {
 .sliderwrapper p {
     font-family: 'Montserrat';
     color: #ffffff;
-    margin-top: 29px;
-    margin-left: 135px;
-    font-size: 20px;
+    margin-top: 22px;
+    margin-left: 100px;
+    font-size: 15px;
     font-weight: 500;
 }
 
 .sliderwrapper a {
-    margin-left: 135px;
-    margin-top: 42px;
+    margin-left: 100px;
+    margin-top: 30px;
     display: inline-block;
 }
 
 .sliderwrapper .slides button {
     background-color: #E479F3;
     color: #000000;
-    width: 199px;
-    height: 50px;
-    font-size: 20px;
+    width: 150px;
+    height: 37px;
+    font-size: 15px;
     border: none;
-    border-radius: 50px;
+    border-radius: 37px;
 }
 
 .slides .overlay {
-    height: 100%;
+    height: inherit;
     width: 100%;
     background-color: #0000007f;
 }
@@ -394,6 +393,35 @@ li {
     font-weight: 700;
     font-size: 32px;
 }
+
+#Testimonials ul {
+    height: fit-content;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+#Testimonials ul li {
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+#Testimonials ul li:hover {
+    cursor: pointer;
+}
+.testimonialswrapper {
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.testimonialswrapper::-webkit-scrollbar {
+    display: none;
+}
 .MTestimonialcards{
     margin: 0 auto;
     margin-top: 27px;
@@ -402,6 +430,9 @@ li {
     flex-direction: row;
     justify-content: center;
     gap: 39px;
+    width: inherit;
+    flex-shrink: 0;
+    scroll-snap-align: center;
 }
 .Testimonialcard{
     width: 402px;
@@ -433,6 +464,18 @@ li {
 #parent3 {
     background-image: url('./Resources/parent3.png');
 }
+
+#alum1 {
+    background-image: url('./Resources/alum1.png');
+}
+
+#alum2 {
+    background-image: url('./Resources/alum2.png');
+}
+
+#alum3 {
+    background-image: url('./Resources/alum3.png');
+}
 .MTestimonialcards .Testimonialcard p#comment{
     margin: 0 auto;
     margin-top: 22px;
@@ -443,6 +486,10 @@ li {
     font-family: 'Montserrat';
     line-height: 24px;
     font-size: 16px;
+}
+
+#comment span {
+    color: #E479F3;
 }
 .MTestimonialcards .Testimonialcard img {
     display: block;
