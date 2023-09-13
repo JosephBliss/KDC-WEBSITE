@@ -187,7 +187,10 @@
         <li id="alumnibutton">Alumni</li>
       </ul>
       <div class="testimonialswrapper">
-        <div class="MTestimonialcards">
+        <div class="MTestimonialcardswrapper">
+          <button id="testleft" class = 'testbuttons'><</button>
+          <button id="testright" class = 'testbuttons'>></button>
+          <div class="MTestimonialcards">
           <div class="Testimonialcard">
             <div class="circle" id="parent1"></div>
             <p id="comment"><span>Maria Okoye Mrs</span> - Nigeria <br><br> It is great to know that my daughter
@@ -218,9 +221,21 @@
              <br><br> Academically, they are top notch.  Building a wonderful precedence on hard work only.  My two childen</p>
             <img src="./Resources/Stars.png">
           </div>
+          <div class="Testimonialcard">
+            <div class="circle" id="parent1"></div>
+            <p id="comment"><span>Maria Okoye Mrs</span> - Nigeria <br><br> It is great to know that my daughter
+              Osinachim
+              has done extremely and consistently well in her 6yrs stay in kdc. Because of this , I have brought my last
+              daughter to kdc. If I must rate King David College, i will give them 110%. They are very thorough in
+              discipline and sound academically. The children of kdc can compete successful any where in the world.</p>
+            <img src="./Resources/Stars.png">
+          </div>
         </div>
+      </div>
+      <div class="MTestimonialcardswrapper">
+        <button id="testleft2" class = 'testbuttons'><</button>
+          <button id="testright2" class = 'testbuttons'>></button>
         <div class="MTestimonialcards">
-          
           <div class="Testimonialcard">
             <div class="circle" id="alum1"></div>
             <p id="comment"><span>Chimdi Alexis Onyekesi.</span><br><br><strong> Ex-student King David College, 2010 graduating
@@ -240,6 +255,7 @@
             <p id="comment"><span> Elekwachi Godselect B.MLS,AMLSCN,MPH,MSC,HCPC</span> <br><br><strong>( Biomedical scientist, Chemical pathologist, public health expert) <br> Ex student King David College</strong> <br><br> Rating - 100 % Character and in learning</p>
             <img src="./Resources/Stars.png">
           </div>
+        </div>
         </div>
       </div>
     </section>
@@ -347,6 +363,95 @@
       document.getElementById('alumnibutton').style.color = '#ffffff'
     }
   })
+
+  let carouselFocus = false
+  slider.addEventListener('mouseenter', ()=>{
+    carouselFocus = true
+  })
+  slider.addEventListener('mouseleave', ()=>{
+    carouselFocus = false
+  })
+
+  setInterval(() => {
+    if (!carouselFocus) {
+      document.getElementById('right').click()
+    }
+  }, 5000)
+
+  for (let i = 0; i < 2; i++) {
+    if (document.getElementsByClassName('MTestimonialcards')[i].children.length < 4) {
+      document.getElementsByClassName('MTestimonialcards')[i].style.justifyContent = 'center'
+    }
+  }
+
+  let buttonRightFocus = false
+  let buttonRightFocus2 = false
+  let buttonLeftFocus = false
+  let buttonLeftFocus2 = false
+  document.getElementById('testright').addEventListener('mouseover', () => {
+    buttonRightFocus = true
+  })
+  document.getElementById('testright2').addEventListener('mouseover', () => {
+    buttonRightFocus2 = true
+  })
+  document.getElementById('testright').addEventListener('mouseleave', () => {
+    buttonRightFocus = false
+  })
+  document.getElementById('testright2').addEventListener('mouseleave', () => {
+    buttonRightFocus2 = false
+  })
+
+  document.getElementById('testleft').addEventListener('mouseover', () => {
+    buttonLeftFocus = true
+  })
+  document.getElementById('testleft2').addEventListener('mouseover', () => {
+    buttonLeftFocus2 = true
+  })
+  document.getElementById('testleft').addEventListener('mouseleave', () => {
+    buttonLeftFocus = false
+  })
+  document.getElementById('testleft2').addEventListener('mouseleave', () => {
+    buttonLeftFocus2 = false
+  })
+
+  setInterval(()=>{
+    if(buttonRightFocus) {
+      document.getElementsByClassName('MTestimonialcards')[0].scrollLeft = document.getElementsByClassName('MTestimonialcards')[0].scrollLeft + 10
+    }
+    if(buttonRightFocus2) {
+      document.getElementsByClassName('MTestimonialcards')[1].scrollLeft = document.getElementsByClassName('MTestimonialcards')[1].scrollLeft + 10
+    }
+
+    if(buttonLeftFocus) {
+      document.getElementsByClassName('MTestimonialcards')[0].scrollLeft = document.getElementsByClassName('MTestimonialcards')[0].scrollLeft - 10
+    }
+    if(buttonLeftFocus2) {
+      document.getElementsByClassName('MTestimonialcards')[1].scrollLeft = document.getElementsByClassName('MTestimonialcards')[1].scrollLeft - 10
+    }
+
+    if (document.getElementsByClassName('MTestimonialcards')[0].scrollLeft + document.getElementsByClassName('MTestimonialcards')[0].offsetWidth >= document.getElementsByClassName('MTestimonialcards')[0].scrollWidth -50) {
+        document.getElementById('testright').style.backgroundColor = '#4a4a4a80'
+      } else {
+        document.getElementById('testright').style.backgroundColor = '#4a4a4a'
+      }
+    if (document.getElementsByClassName('MTestimonialcards')[1].scrollLeft + document.getElementsByClassName('MTestimonialcards')[1].offsetWidth >= document.getElementsByClassName('MTestimonialcards')[1].scrollWidth -50) {
+        document.getElementById('testright2').style.backgroundColor = '#4a4a4a80'
+      } else {
+        document.getElementById('testright2').style.backgroundColor = '#4a4a4a'
+      }
+
+    if (document.getElementsByClassName('MTestimonialcards')[0].scrollLeft === 0) {
+      document.getElementById('testleft').style.backgroundColor = '#4a4a4a80'
+    } else {
+      document.getElementById('testleft').style.backgroundColor = '#4a4a4a'
+    }
+    if (document.getElementsByClassName('MTestimonialcards')[1].scrollLeft === 0) {
+      document.getElementById('testleft2').style.backgroundColor = '#4a4a4a80'
+    } else {
+      document.getElementById('testleft2').style.backgroundColor = '#4a4a4a'
+    }
+  },10)
+
 </script>
 
 </html>
