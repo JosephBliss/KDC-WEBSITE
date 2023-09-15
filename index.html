@@ -11,18 +11,18 @@
 
 <body>
   <nav>
-    <img src="./Resources/kdc bag.png">
+    <img src="./Resources/kdc bag.png" onclick="logoClick()">
     <ul>
-      <a href="#home">
+      <a href="./index.html">
         <li>HOME</li>
       </a>
-      <a href="#about us">
+      <a href="./AboutUs/index.html">
         <li>ABOUT US</li>
       </a>
-      <a href="#our gallery">
+      <a href="./Gallery/index.html">
         <li>OUR GALLERY</li>
       </a>
-      <a href="#events">
+      <a href="./Events/index.html">
         <li>EVENTS</li>
       </a>
       <a href="./ContactUs/index.html">
@@ -270,7 +270,7 @@
     </section>
     <footer>
       <div class="links">
-        <div class="badge">
+        <div class="badge" onclick="logoClick()">
           <div class="img"></div>
           <p>“King David College…A PLACE TO BE”</p>
         </div>
@@ -278,9 +278,9 @@
           <h3>Quick Links</h3>
           <ul>
             <li><a href="./index.html">Home</a></li>
-            <li><a href="">About Us</a></li>
-            <li><a href="">Our Galery</a></li>
-            <li><a href="">Contact Us</a></li>
+            <li><a href="./AboutUs/index.html">About Us</a></li>
+            <li><a href="./Gallery/index.html">Our Galery</a></li>
+            <li><a href="./ContactUs/index.html">Contact Us</a></li>
           </ul>
 
         </div>
@@ -306,6 +306,10 @@
   </main>
 </body>
 <script type="text/javascript">
+  const logoClick = () => {
+    window.open('./index.html', '_self')
+  }
+
   let sliderIndex = 0
   let sliderIndexLeft = 1
 
@@ -417,19 +421,31 @@
   setInterval(()=>{
     if(buttonRightFocus) {
       document.getElementsByClassName('MTestimonialcards')[0].scrollLeft = document.getElementsByClassName('MTestimonialcards')[0].scrollLeft + 10
+      document.getElementById('testright').style.backgroundColor = '#4a4a4a'
+    } else {
+      document.getElementById('testright').style.backgroundColor = '#4a4a4a10'
     }
     if(buttonRightFocus2) {
       document.getElementsByClassName('MTestimonialcards')[1].scrollLeft = document.getElementsByClassName('MTestimonialcards')[1].scrollLeft + 10
+      document.getElementById('testright2').style.backgroundColor = '#4a4a4a'
+    } else {
+      document.getElementById('testright2').style.backgroundColor = '#4a4a4a10'
     }
 
     if(buttonLeftFocus) {
       document.getElementsByClassName('MTestimonialcards')[0].scrollLeft = document.getElementsByClassName('MTestimonialcards')[0].scrollLeft - 10
+      document.getElementById('testleft').style.backgroundColor = '#4a4a4a'
+    } else {
+      document.getElementById('testleft').style.backgroundColor = '#4a4a4a10'
     }
     if(buttonLeftFocus2) {
       document.getElementsByClassName('MTestimonialcards')[1].scrollLeft = document.getElementsByClassName('MTestimonialcards')[1].scrollLeft - 10
+      document.getElementById('testleft2').style.backgroundColor = '#4a4a4a'
+    } else {
+      document.getElementById('testleft2').style.backgroundColor = '#4a4a4a10'
     }
 
-    if (document.getElementsByClassName('MTestimonialcards')[0].scrollLeft + document.getElementsByClassName('MTestimonialcards')[0].offsetWidth >= document.getElementsByClassName('MTestimonialcards')[0].scrollWidth -50) {
+    /*if (document.getElementsByClassName('MTestimonialcards')[0].scrollLeft + document.getElementsByClassName('MTestimonialcards')[0].offsetWidth >= document.getElementsByClassName('MTestimonialcards')[0].scrollWidth -50) {
         document.getElementById('testright').style.backgroundColor = '#4a4a4a80'
       } else {
         document.getElementById('testright').style.backgroundColor = '#4a4a4a'
@@ -449,7 +465,7 @@
       document.getElementById('testleft2').style.backgroundColor = '#4a4a4a80'
     } else {
       document.getElementById('testleft2').style.backgroundColor = '#4a4a4a'
-    }
+    }*/
   },10)
 
 </script>
