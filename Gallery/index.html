@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900|Ubuntu:400,500,700"
+        rel="stylesheet" />
+    <title>King David College</title>
+</head>
+
+<body>
+    <nav>
+        <img src="../Resources/kdc bag.png" onclick="logoClick()">
+        <ul>
+            <a href="../index.html">
+                <li>HOME</li>
+            </a>
+            <a href="../AboutUSCollege/index.html">
+                <li>ABOUT US</li>
+            </a>
+            <a href="../Gallery/index.html">
+                <li>OUR GALLERY</li>
+            </a>
+            <a href="../Events/index.html">
+                <li>EVENTS</li>
+            </a>
+            <a href="../ContactUs/index.html">
+                <li>CONTACT US</li>
+            </a>
+        </ul>
+    </nav>
+    <main>
+        <div class="banner">
+            <div class="overlay">
+                <h1>Gallery</h1>
+
+            </div>
+        </div>
+        <div class="photos">
+            <h1>Photos</h1>
+            <p>CLICK ON THUMBNAIL TO VIEW PICTURE</p>
+            <div class="photoswrapper">
+                <button id="sliderleft"><</button>
+                <button id="sliderright">></button>
+                <div class="slider" id="galleryslider">
+                    
+                </div>
+                <div class="buttons">
+                    <button id="prev" onclick="buttonPrev()">Prev</button>
+                    <button id="next" onclick="buttonNext()">Next</button>
+                </div>
+                <img src="" alt="" id="bigpic">
+            </div>
+        </div>
+        <footer>
+            <div class="links">
+                <div class="badge" onclick="logoClick()">
+                    <div class="img"></div>
+                    <p>“King David College…A PLACE TO BE”</p>
+                </div>
+                <div class="quicklinks">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../AboutUsCollege/index.html">About Us</a></li>
+                        <li><a href="../Gallery/index.html">Our Galery</a></li>
+                        <li><a href="../ContactUs/index.html">Contact Us</a></li>
+                    </ul>
+
+                </div>
+                <div class="contact">
+                    <h3>Contact </h3>
+                    <div class="location">
+                        <img src="../Resources/location-pin 1.png">
+                        <p>No. 9 Maxwell Okene Street Pipeline Rumuokwurusi Port Harcourt Rivers State</p>
+                    </div>
+                    <div class="contact">
+                        <img src="../Resources/phone-call 1.png">
+                        <p>0806 422 8446</p>
+                    </div>
+                    <div class="email">
+                        <img src="../Resources/email (1) 1.png">
+                        <p>Kingdavidcollege3@yahoo.com</p>
+                    </div>
+                </div>
+            </div>
+            <p class="copyright">©2023 - KDC - All rights reserved</p>
+            <p class="developers">Developed by the coding students of King David College</p>
+        </footer>
+    </main>
+</body>
+<script type="text/javascript">
+
+    let currentPicId = 'no id'
+    const logoClick = () => {
+        window.open('../index.html', '_self')
+    }
+
+    const sliderLeft = document.getElementById('sliderleft')
+    const sliderRight = document.getElementById('sliderright')
+    let sliderLeftFocus = false
+    let sliderRightFocus = false
+
+    sliderRight.addEventListener('mouseover', () => {
+        sliderRightFocus = true
+    })
+    sliderRight.addEventListener('mouseleave', () => {
+        sliderRightFocus = false
+    })
+
+    sliderLeft.addEventListener('mouseover', () => {
+        sliderLeftFocus = true
+    })
+    sliderLeft.addEventListener('mouseleave', () => {
+        sliderLeftFocus = false
+    })
+
+    setInterval(() => {
+        if (sliderRightFocus) {
+            document.getElementById('galleryslider').scrollLeft = document.getElementById('galleryslider').scrollLeft + 10
+        }
+
+        if (sliderLeftFocus) {
+            document.getElementById('galleryslider').scrollLeft = document.getElementById('galleryslider').scrollLeft - 10
+        }
+    }, 10)
+
+    const buttonNext = () => {
+        if (currentPicId === 'no id') {
+            currentPicId = 0
+            document.getElementById('bigpic').src = gallerypics[currentPicId]
+            document.getElementsByClassName('slide')[currentPicId].style.border='2px solid #E479F3'
+            for (let i = 0; i < document.getElementsByClassName('slide').length; i++) {
+                if (document.getElementsByClassName('slide')[i].id != currentPicId) {
+                    document.getElementsByClassName('slide')[i].style.border='none'
+                }
+            }
+        } else if (currentPicId != document.getElementsByClassName('slide').length - 1) {
+            currentPicId++
+            document.getElementById('bigpic').src = gallerypics[currentPicId]
+            document.getElementsByClassName('slide')[currentPicId].style.border='2px solid #E479F3'
+            for (let i = 0; i < document.getElementsByClassName('slide').length; i++) {
+                if (document.getElementsByClassName('slide')[i].id != currentPicId) {
+                    document.getElementsByClassName('slide')[i].style.border='none'
+                }
+            }
+        }
+    }
+
+    const buttonPrev = () => {
+        if (currentPicId === 'no id') {
+            null
+        } else if (currentPicId != 0) {
+            currentPicId--
+            document.getElementById('bigpic').src = gallerypics[currentPicId]
+            document.getElementsByClassName('slide')[currentPicId].style.border='2px solid #E479F3'
+            for (let i = 0; i < document.getElementsByClassName('slide').length; i++) {
+                if (document.getElementsByClassName('slide')[i].id != currentPicId) {
+                    document.getElementsByClassName('slide')[i].style.border='none'
+                }
+            }
+        }
+    }
+
+    const gallerypics = ['../Resources/gallery1.png', '../Resources/gallery2.png', '../Resources/gallery3.png', '../Resources/gallery4.png', '../Resources/gallery5.png']
+    gallerypics.forEach((pic, index) => {
+        const slide = document.createElement('div')
+        slide.classList.add('slide')
+        slide.id = index
+        slide.style.backgroundImage = `url(${pic})`
+        slide.addEventListener('click', e => {
+            currentPicId = e.target.id
+            e.target.style.border = '2px solid #E479F3'
+            for (let i = 0; i < document.getElementsByClassName('slide').length; i++) {
+                if (document.getElementsByClassName('slide')[i].id != currentPicId) {
+                    document.getElementsByClassName('slide')[i].style.border='none'
+                }
+            }
+            document.getElementById('bigpic').src = gallerypics[currentPicId]
+        })
+        document.getElementById('galleryslider').appendChild(slide)
+    })
+
+</script>
+
+</html>
