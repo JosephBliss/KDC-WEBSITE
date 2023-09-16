@@ -54,14 +54,14 @@
                 </div>
             </div>
             <form><div>
-                <input type="text" name="name" id="name" placeholder="Name">
-                <input type="text" name="email" id="email" placeholder="Email">
-                <input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="Phone Number"></input>
-                <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                <input type="text" name="name" id="name" placeholder="Name" onchange="handleInputChange()" required>
+                <input type="text" name="email" id="email" placeholder="Email" onchange="handleInputChange()">
+                <input onchange="handleInputChange()" type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="Phone Number"></input>
+                <textarea name="message" id="message" cols="30" rows="10" maxlength="300" onchange="handleInputChange()" required></textarea>
                 <p>Characters remaining</p>
                 <div id="remainingChar">300</div>
 
-                <div><button id = 'sendMessage' onclick="handleInputChange()">Submit Enquiry</button></div>
+                <div><button id = 'sendMessage'>Submit Enquiry</button></div>
             </div></form>
         </div>
         <footer>
@@ -107,10 +107,10 @@
   }
 
   const handleInputChange = () => {
-       if (1===1) {
+       if (document.getElementById('name').value && document.getElementById('message').value) {
         document.getElementById('sendMessage').addEventListener('click', () => {
-        window.open(`mailto: contact@laimunati.com`, '_self')
-    })
+            window.open(`mailto: Kingdavidcollege3@yahoo.com?subject=${'Web Inquiry'}&body=${document.getElementById('message').value}\n sent by ${document.getElementById('name').value}&cc=${document.getElementById('email').value ? document.getElementById('email').value : null}`)
+        })
        }
     }
 

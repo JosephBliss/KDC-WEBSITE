@@ -146,6 +146,10 @@ li {
     background-color: #EEF3F6;
     display: block;
     margin: 0 auto;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-style: italic;
+    padding-left: 16px;
 }
 
 .contactus form p {
