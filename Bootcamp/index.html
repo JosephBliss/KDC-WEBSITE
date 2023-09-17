@@ -102,15 +102,6 @@
         <section class="gallery">
             <h6>Gallery</h6>
             <div class="photogrid">
-                <div class="photo"></div>
-                <div class="photo"></div>
-                <div class="photo"></div>
-                <div class="photo"></div>
-                <div class="photo"></div>
-                <div class="photo"></div>
-                <div class="photo"></div>
-                <div class="photo"></div>
-                <div class="photo"></div>
             </div>
         </section>
         <footer>
@@ -157,9 +148,12 @@
     }
 
     const photos = ['../Resources/bootcamp1.png', '../Resources/bootcamp2.png', '../Resources/bootcamp3.png', '../Resources/bootcamp4.png', '../Resources/bootcamp5.png', '../Resources/bootcamp6.png', '../Resources/bootcamp7.png', '../Resources/bootcamp8.png', '../Resources/bootcamp9.png']
-    for (let i = 0; i < photos.length; i++) {
-        document.getElementsByClassName('photo')[i].style.backgroundImage = `url(${photos[i]})`
-    }
+    photos.forEach(photo => {
+        const item = document.createElement('div')
+        item.classList.add('photo')
+        item.style.backgroundImage = `url(${photo})`
+        document.getElementsByClassName('photogrid')[0].appendChild(item)
+    })
 </script>
 
 </html>
