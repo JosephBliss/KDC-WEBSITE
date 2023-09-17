@@ -91,6 +91,10 @@ nav ul a li {
     color: #E479F3;
 }
 
+#college {
+    text-decoration: underline;
+}
+
 .banner ul span a {
     text-decoration: underline;
     color: #E479F3;
