@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./styles.css" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900|Ubuntu:400,500,700"
         rel="stylesheet" />
-    <title>King David College</title>
+    <title>Cot | King David College</title>
 </head>
 
 <body>
@@ -36,8 +36,8 @@
             <div class="overlay">
                 <h1>About Us</h1>
                 <ul>
-                    <a href="../AboutUsCollege/index.html"><li>College</li></a>
-                    <span><a href="./index.html"><li>Cot</li></a></span>
+                    <a id="college" href="../AboutUsCollege/index.html"><li>College</li></a>
+                    <span><a id="cot" href="./index.html"><li>Cot</li></a></span>
                 </ul>
             </div>
         </div>
@@ -203,6 +203,11 @@ We understand the importance of staying connected to the global landscape. Throu
     </main>
 </body>
 <script type="text/javascript">
+    const cot = document.getElementById('cot');
+    console.log(cot)
+    const college = document.getElementById('college');
+    cot.style.color = "#ffffff";
+    college.style.color = "#E479F3";
 
 </script>
 
