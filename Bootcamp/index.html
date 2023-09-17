@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900|Ubuntu:400,500,700"
+        rel="stylesheet" />
+    <title>King David College</title>
+</head>
+
+<body>
+    <nav>
+        <img src="../Resources/kdc bag.png" onclick="logoClick()">
+        <ul>
+            <a href="../index.html">
+                <li>HOME</li>
+            </a>
+            <a href="../AboutUSCollege/index.html">
+                <li>ABOUT US</li>
+            </a>
+            <a href="../Gallery/index.html">
+                <li>OUR GALLERY</li>
+            </a>
+            <a href="../Events/index.html">
+                <li>EVENTS</li>
+            </a>
+            <a href="../ContactUs/index.html">
+                <li>CONTACT US</li>
+            </a>
+        </ul>
+    </nav>
+    <main>
+        <div class="banner">
+            <div class="overlay">
+                <h1>Tech Bootcamp</h1>
+
+            </div>
+        </div>
+        <section class="programme">
+            <h6>Introduction to Tech Programme</h6>
+            <br><br>
+            <article>
+                <strong>Class Description:</strong>
+                <br><br>
+                In partnership with <strong>Definity Innovations & Solutions Limited</strong> the tech boot camp
+                programme is designed to provide students with a foundational understanding of computer programming
+                concepts, coding languages and design. This hands-on course is suitable for beginners with little to no
+                prior coding or design experience. Through a structured curriculum and practical exercises, students
+                will gain the skills necessary to write and understand basic code, solve problems algorithmically, and
+                develop simple programs.
+                <br><br>
+                <strong>Class Details
+                    <br><br>
+                    Target Audience:</strong>
+                <br><br>
+                Students In JSS2 - SS3 with little to no prior coding experience.
+                <br><br>
+                Students not enrolled in KDC can also take the classes during the long holiday.
+                <br><br>
+                <strong>Duration:</strong>
+                <br><br>
+                During school sessions: Wednesdays and Fridays - 2:30PM - 4PM.
+                <br><br>
+                Long Holidays: Monday to Friday 9AM to 11AM and 11AM to 1PM.
+                <br><br>
+                <strong>Classroom Setup:</strong>
+                <br><br>
+                The classroom is equipped with individual computers for each student, ensuring hands-on engagement with
+                coding activities. Additionally, there is a projector and screen for the instructor to demonstrate
+                coding concepts and showcase student work.
+                <br><br>
+                <strong>Tech Niche Available:</strong>
+                <br><br>
+                <ol>
+                    <li>Software Engineering</li>
+                    <li>Backend Engineering</li>
+                    <li>UI/UX Design</li>
+                    <li>Software Product Management</li>
+                    <li>Game Development</li>
+                </ol>
+                <br><br>
+                <strong>Assessment:</strong>
+                <br><br>
+                Assessment is a combination of in-class coding exercises, small projects, quizzes, and a final project.
+                The final project encourages students to creatively implement what they've learned and showcase their
+                ability to solve coding problems independently.
+                <br><br>
+                <strong>Benefits:</strong>
+                <br><br>
+                By the end of the course, students will have a solid understanding of coding fundamentals,
+                problem-solving skills, and the ability to create basic programs. This class lays a strong foundation
+                for those interested in pursuing more advanced coding courses or careers in technology.
+                <br><br>
+                <strong>Note:</strong>
+                <br><br>
+                The above description is a general outline and can be customized based on the specific school's
+                resources, goals, and the proficiency of the students.
+            </article>
+        </section>
+        <section class="gallery">
+            <h6>Gallery</h6>
+            <div class="photogrid">
+                <div class="photo"></div>
+                <div class="photo"></div>
+                <div class="photo"></div>
+                <div class="photo"></div>
+                <div class="photo"></div>
+                <div class="photo"></div>
+                <div class="photo"></div>
+                <div class="photo"></div>
+                <div class="photo"></div>
+            </div>
+        </section>
+        <footer>
+            <div class="links">
+                <div class="badge" onclick="logoClick()">
+                    <div class="img"></div>
+                    <p>“King David College…A PLACE TO BE”</p>
+                </div>
+                <div class="quicklinks">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../AboutUsCollege/index.html">About Us</a></li>
+                        <li><a href="../Gallery/index.html">Our Galery</a></li>
+                        <li><a href="../ContactUs/index.html">Contact Us</a></li>
+                    </ul>
+
+                </div>
+                <div class="contact">
+                    <h3>Contact </h3>
+                    <div class="location">
+                        <img src="../Resources/location-pin 1.png">
+                        <p>No. 9 Maxwell Okene Street Pipeline Rumuokwurusi Port Harcourt Rivers State</p>
+                    </div>
+                    <div class="contact">
+                        <img src="../Resources/phone-call 1.png">
+                        <p>0806 422 8446</p>
+                    </div>
+                    <div class="email">
+                        <img src="../Resources/email (1) 1.png">
+                        <p>Kingdavidcollege3@yahoo.com</p>
+                    </div>
+                </div>
+            </div>
+            <p class="copyright">©2023 - KDC - All rights reserved</p>
+            <p class="developers">Developed by the coding students of King David College</p>
+        </footer>
+    </main>
+</body>
+<script type="text/javascript">
+
+    const logoClick = () => {
+        window.open('../index.html', '_self')
+    }
+
+    const photos = ['../Resources/bootcamp1.png', '../Resources/bootcamp2.png', '../Resources/bootcamp3.png', '../Resources/bootcamp4.png', '../Resources/bootcamp5.png', '../Resources/bootcamp6.png', '../Resources/bootcamp7.png', '../Resources/bootcamp8.png', '../Resources/bootcamp9.png']
+    for (let i = 0; i < photos.length; i++) {
+        document.getElementsByClassName('photo')[i].style.backgroundImage = `url(${photos[i]})`
+    }
+</script>
+
+</html>
