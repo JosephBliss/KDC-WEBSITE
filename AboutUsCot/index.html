@@ -23,9 +23,9 @@
             <a href="../Gallery/index.html">
                 <li>OUR GALLERY</li>
             </a>
-            <a href="../Events/index.html">
-                <li>EVENTS</li>
-            </a>
+            <a href="../Bootcamp/index.html">
+                <li>TECH BOOTCAMP</li>
+              </a>
             <a href="../ContactUs/index.html">
                 <li>CONTACT US</li>
             </a>
@@ -176,7 +176,7 @@ We understand the importance of staying connected to the global landscape. Throu
                     <ul>
                         <li><a href="../index.html">Home</a></li>
                         <li><a href="../AboutUsCollege/index.html">About Us</a></li>
-                        <li><a href="../Gallery/index.html">Our Galery</a></li>
+                        <li><a href="../Gallery/index.html">Our Gallery</a></li>
                         <li><a href="../ContactUs/index.html">Contact Us</a></li>
                     </ul>
 
@@ -206,11 +206,17 @@ We understand the importance of staying connected to the global landscape. Throu
     const cot = document.getElementById('cot');
     console.log(cot)
     const college = document.getElementById('college');
-    cot.style.color = "#ffffff";
-    college.style.color = "#E479F3";
+    college.style.color = "#ffffff";
+    cot.style.color = "#E479F3";
     const logoClick = () => {
     window.open('../index.html', '_self')
   }
+  let navIcons = document.getElementsByTagName('li')
+    for (let i = 0; i < navIcons.length; i++) {
+        if (navIcons[i].textContent === 'ABOUT US') {
+            navIcons[i].style.color = '#E479F3'
+        }
+    }
 </script>
 
 </html>

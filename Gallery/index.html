@@ -20,11 +20,11 @@
             <a href="../AboutUSCollege/index.html">
                 <li>ABOUT US</li>
             </a>
-            <a href="../Gallery/index.html">
+            <a href="./index.html">
                 <li>OUR GALLERY</li>
             </a>
-            <a href="../Events/index.html">
-                <li>EVENTS</li>
+            <a href="../Bootcamp/index.html">
+                <li>TECH BOOTCAMP</li>
             </a>
             <a href="../ContactUs/index.html">
                 <li>CONTACT US</li>
@@ -42,16 +42,17 @@
             <h1>Photos</h1>
             <p>CLICK ON THUMBNAIL TO VIEW PICTURE</p>
             <div class="photoswrapper">
-                <button id="sliderleft"><</button>
-                <button id="sliderright">></button>
-                <div class="slider" id="galleryslider">
-                    
-                </div>
-                <div class="buttons">
-                    <button id="prev" onclick="buttonPrev()">Prev</button>
-                    <button id="next" onclick="buttonNext()">Next</button>
-                </div>
-                <img src="" alt="" id="bigpic">
+                <button id="sliderleft">
+                    << /button>
+                        <button id="sliderright">></button>
+                        <div class="slider" id="galleryslider">
+
+                        </div>
+                        <div class="buttons">
+                            <button id="prev" onclick="buttonPrev()">Prev</button>
+                            <button id="next" onclick="buttonNext()">Next</button>
+                        </div>
+                        <img src="" alt="" id="bigpic">
             </div>
         </div>
         <footer>
@@ -65,7 +66,7 @@
                     <ul>
                         <li><a href="../index.html">Home</a></li>
                         <li><a href="../AboutUsCollege/index.html">About Us</a></li>
-                        <li><a href="../Gallery/index.html">Our Galery</a></li>
+                        <li><a href="../Gallery/index.html">Our Gallery</a></li>
                         <li><a href="../ContactUs/index.html">Contact Us</a></li>
                     </ul>
 
@@ -96,6 +97,12 @@
     let currentPicId = 'no id'
     const logoClick = () => {
         window.open('../index.html', '_self')
+    }
+    let navIcons = document.getElementsByTagName('a')
+    for (let i = 0; i < navIcons.length; i++) {
+        if (navIcons[i].getAttribute('href') === './index.html') {
+            navIcons[i].style.color = '#E479F3'
+        }
     }
 
     const sliderLeft = document.getElementById('sliderleft')
@@ -131,19 +138,19 @@
         if (currentPicId === 'no id') {
             currentPicId = 0
             document.getElementById('bigpic').src = gallerypics[currentPicId]
-            document.getElementsByClassName('slide')[currentPicId].style.border='2px solid #E479F3'
+            document.getElementsByClassName('slide')[currentPicId].style.border = '2px solid #E479F3'
             for (let i = 0; i < document.getElementsByClassName('slide').length; i++) {
                 if (document.getElementsByClassName('slide')[i].id != currentPicId) {
-                    document.getElementsByClassName('slide')[i].style.border='none'
+                    document.getElementsByClassName('slide')[i].style.border = 'none'
                 }
             }
         } else if (currentPicId != document.getElementsByClassName('slide').length - 1) {
             currentPicId++
             document.getElementById('bigpic').src = gallerypics[currentPicId]
-            document.getElementsByClassName('slide')[currentPicId].style.border='2px solid #E479F3'
+            document.getElementsByClassName('slide')[currentPicId].style.border = '2px solid #E479F3'
             for (let i = 0; i < document.getElementsByClassName('slide').length; i++) {
                 if (document.getElementsByClassName('slide')[i].id != currentPicId) {
-                    document.getElementsByClassName('slide')[i].style.border='none'
+                    document.getElementsByClassName('slide')[i].style.border = 'none'
                 }
             }
         }
@@ -155,10 +162,10 @@
         } else if (currentPicId != 0) {
             currentPicId--
             document.getElementById('bigpic').src = gallerypics[currentPicId]
-            document.getElementsByClassName('slide')[currentPicId].style.border='2px solid #E479F3'
+            document.getElementsByClassName('slide')[currentPicId].style.border = '2px solid #E479F3'
             for (let i = 0; i < document.getElementsByClassName('slide').length; i++) {
                 if (document.getElementsByClassName('slide')[i].id != currentPicId) {
-                    document.getElementsByClassName('slide')[i].style.border='none'
+                    document.getElementsByClassName('slide')[i].style.border = 'none'
                 }
             }
         }
@@ -175,7 +182,7 @@
             e.target.style.border = '2px solid #E479F3'
             for (let i = 0; i < document.getElementsByClassName('slide').length; i++) {
                 if (document.getElementsByClassName('slide')[i].id != currentPicId) {
-                    document.getElementsByClassName('slide')[i].style.border='none'
+                    document.getElementsByClassName('slide')[i].style.border = 'none'
                 }
             }
             document.getElementById('bigpic').src = gallerypics[currentPicId]

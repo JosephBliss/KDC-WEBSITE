@@ -87,18 +87,15 @@ nav ul a li {
     margin-right: 24px;
 }
 
-.banner ul a:hover {
+.banner ul a li:hover {
     color: #E479F3;
 }
 
-#college {
-    text-decoration: underline;
-}
-
-.banner ul span a {
+#cot {
     text-decoration: underline;
     color: #E479F3;
 }
+
 
 .banner ul a li {
     display: inline;
