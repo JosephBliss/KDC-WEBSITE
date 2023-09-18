@@ -23,8 +23,8 @@
             <a href="../Gallery/index.html">
                 <li>OUR GALLERY</li>
             </a>
-            <a href="../Events/index.html">
-                <li>EVENTS</li>
+            <a href="./index.html">
+                <li>TECH BOOTCAMP</li>
             </a>
             <a href="../ContactUs/index.html">
                 <li>CONTACT US</li>
@@ -115,7 +115,7 @@
                     <ul>
                         <li><a href="../index.html">Home</a></li>
                         <li><a href="../AboutUsCollege/index.html">About Us</a></li>
-                        <li><a href="../Gallery/index.html">Our Galery</a></li>
+                        <li><a href="../Gallery/index.html">Our Gallery</a></li>
                         <li><a href="../ContactUs/index.html">Contact Us</a></li>
                     </ul>
 
@@ -145,6 +145,13 @@
 
     const logoClick = () => {
         window.open('../index.html', '_self')
+    }
+
+    let navIcons = document.getElementsByTagName('a')
+    for (let i = 0; i < navIcons.length; i++) {
+        if (navIcons[i].getAttribute('href') === './index.html') {
+            navIcons[i].style.color = '#E479F3'
+        }
     }
 
     const photos = ['../Resources/bootcamp1.png', '../Resources/bootcamp2.png', '../Resources/bootcamp3.png', '../Resources/bootcamp4.png', '../Resources/bootcamp5.png', '../Resources/bootcamp6.png', '../Resources/bootcamp7.png', '../Resources/bootcamp8.png', '../Resources/bootcamp9.png']
