@@ -7,9 +7,19 @@
   <link rel="stylesheet" href="./styles.css" />
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900|Ubuntu:400,500,700" rel="stylesheet" />
   <title>King David College</title>
+  <link rel="shortcut icon" href="./Resources/kdc bag.png" type="image/x-icon">
 </head>
 
 <body>
+  <div class="sandwichmenu">
+    <button id="close"></button>
+    <ul>
+      <a href="./index.html"><li>Home</li></a>
+      <a href="./AboutUsCollege/index.html"><li>About Us</li></a>
+      <a href="./Gallery/index.html"><li>Our Gallery</li></a>
+      <a href="./ContactUs/index.html"><li>Contact Us</li></a>
+    </ul>
+  </div>
   <nav>
     <img src="./Resources/kdc bag.png" onclick="logoClick()">
     <ul>
@@ -29,6 +39,7 @@
         <li>CONTACT US</li>
       </a>
     </ul>
+    <button id="sandwichbutton"></button>
   </nav>
   <main>
     <div class="slidercontainer">
@@ -168,9 +179,7 @@
         <div class="labcard">
           <div class="labcardtextbox">
             <p> Science Lab</p>
-            <article>A dedicated space within the school where students engage in hands-on scientific experiments and
-              investigations. Equipped with various specialized tools, equipment, and materials, the lab provides a
-              controlled environment for students to learn and ...</article>
+            <article>A  dedicated space within the school where students engage in hands-on scientific experiments and investigations. Equipped with various specialized tools, equipment, and materials, the lab provides a controlled...</article>
           </div>
           <div class="sciencelab"></div>
         </div>
@@ -310,6 +319,18 @@
     window.open('./index.html', '_self')
   }
 
+  document.getElementById('sandwichbutton').addEventListener('click', () => {
+    document.getElementsByClassName('sandwichmenu')[0].classList.toggle('active')
+  })
+  document.getElementById('close').addEventListener('click', () => {
+    document.getElementsByClassName('sandwichmenu')[0].classList.toggle('active')
+  })
+  document.addEventListener('click', ({target}) => {
+    if(target != document.getElementById('sandwichbutton') && !document.getElementsByClassName('sandwichmenu')[0].contains(target)) {
+      document.getElementsByClassName('sandwichmenu')[0].classList.remove('active')
+    }
+  })
+
   let navIcons = document.getElementsByTagName('a')
     for (let i = 0; i < navIcons.length; i++) {
         if (navIcons[i].getAttribute('href') === './index.html') {
@@ -384,7 +405,7 @@
   })
 
   setInterval(() => {
-    if (!carouselFocus) {
+    if (!carouselFocus && !document.getElementsByClassName('sandwichmenu')[0].classList.contains('active')) {
       document.getElementById('right').click()
     }
   }, 5000)

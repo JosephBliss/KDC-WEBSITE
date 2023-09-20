@@ -8,6 +8,10 @@ body {
     width: 100%;
 }
 
+.sandwichmenu {
+    display: none;
+}
+
 nav {
     width: 100%;
     height: 72px;
@@ -52,6 +56,13 @@ li {
     font-family: 'Montserrat';
     font-size: 16px;
     font-weight: 400;
+}
+
+nav #sandwichbutton {
+    background-image: url('./Resources/sandwich.png');
+    height: 24px;
+    width: 24px;
+    display: none;
 }
 
 .slidercontainer {
@@ -680,4 +691,766 @@ footer .links p {
     color: #ffffff;
     font-size: 16px;
     margin-top: 91px;
+}
+
+
+@media(max-width: 1275px) {
+    * {
+        margin: 0;
+        padding: 0;
+        border: 1px solid transparent;
+    }
+    
+    body {
+        width: 100%;
+    }
+
+    .sandwichmenu {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100%;
+        width: 271px;
+        background-color: #212121;
+        z-index: 20;
+        transition: 0.4s;
+    }
+
+    .sandwichmenu.active {
+        right: 0;
+    }
+
+    .sandwichmenu #close {
+        height: 30px;
+        width: 30px;
+        margin-top: 25px;
+        margin-left: 209px;
+        background-image: url('./Resources/clarity_close-line.png');
+        background-color: transparent;
+    }
+
+    .sandwichmenu ul {
+        width: fit-content;
+        height: fit-content;
+        margin: 0 auto;
+        margin-top: 49px;
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+    }
+
+    .sandwichmenu ul a {
+        text-decoration: none;
+    }
+
+    .sandwichmenu ul a li {
+        color: white;
+        font-size: 16px;
+    }
+
+    .sandwichmenu ul a li:hover {
+        color: #E479F3;
+    }
+    
+    nav {
+        width: 100%;
+        height: 64px;
+        position: fixed;
+        top: 0;
+        z-index: 6;
+        background-color: white;
+        border-bottom: 2px solid #E479F3;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    nav img{
+        width: 50px;
+        height: 50px;
+        margin-left: 16px;
+    }
+    
+    nav img:hover {
+        cursor: pointer;
+    }
+    
+    ul {
+        height: 20px;
+        margin-left: auto;
+        width: fit-content;
+        display: none;
+    }
+    
+    
+    li {
+        display: inline;
+        margin: 0 23px;
+        font-family: 'Montserrat';
+        font-size: 16px;
+        font-weight: 400;
+    }
+    
+    nav #sandwichbutton {
+        background-image: url('./Resources/sandwich.png');
+        margin-left: auto;
+        margin-right: 18px;
+        height: 24px;
+        width: 24px;
+        display: block;
+        background-color: transparent;
+    }
+    
+    .slidercontainer {
+        margin: 0 auto;
+        margin-top: 64px;
+        width: 100%;
+    }
+    
+    .sliderwrapper {
+        position: relative;
+        margin: 0 auto;
+        width: 100%;
+    }
+    
+    .slider {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        margin: 0 auto;
+        border-top: 2px solid #E479F3;
+    }
+    
+    .slider::-webkit-scrollbar {
+        display: none;
+    }
+    .sliderwrapper button.arrow{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        height: 35px;
+        background-color: #2b2d2c;
+        border-radius: 2.4px;
+        color: #ffffff;
+        font-size: 1.5em;
+        font-weight: lighter;
+    }
+    .sliderwrapper button#left{
+        top: 250px;
+        transform: translateY(0%);
+        left: 29px;
+    }
+    .sliderwrapper button#right{
+        top: 250px;
+        transform: translateY(0%);
+        right: 29px;
+    }
+    
+    .sliderwrapper button img {
+        width: 50%;
+        height: 50%;
+        background-size: contain;
+    }
+    .slidercontainer .slider .slides {
+        height: 330px;
+        width: 100%;
+        scroll-snap-align: center;
+        flex-shrink: 0;
+    }
+    
+    #slide1 {
+        background-image: url('./Resources/WhatsApp\ Image\ 2023-08-16\ at\ 12.01\ 1.png');
+        background-size: cover;
+    }
+    
+    #slide2 {
+        background-image: url('./Resources/PRIMARY\ 1.png');
+        background-size: cover;
+    }
+    
+    #slide3 {
+        background-image: url('./Resources/LAPTOP\ 1.png');
+        background-size: cover;
+    }
+    
+    .sliderwrapper h1 {
+        font-family: 'Montserrat';
+        width: 313px;
+        height: 58px;
+        color: #ffffff;
+        font-size: 24px;
+        line-height: 29px;
+        font-weight: 700;
+        margin-top: 40px;
+        margin-left: 17px;
+    }
+    .sliderwrapper h1 span{
+        color: #E479F3;
+    }
+    
+    .sliderwrapper p {
+        font-family: 'Montserrat';
+        color: #ffffff;
+        margin-top: 16px;
+        margin-left: 17px;
+        width: 303px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    
+    .sliderwrapper a {
+        margin-left: 28px;
+        margin-top: 16px;
+        display: inline-block;
+    }
+    
+    .sliderwrapper .slides button {
+        background-color: #E479F3;
+        color: #000000;
+        width: 128px;
+        height: 40px;
+        font-size: 12px;
+        border: none;
+        border-radius: 40px;
+    }
+    
+    .slides .overlay {
+        height: inherit;
+        width: 100%;
+        background-color: #0000007f;
+    }
+    
+    .aboutus h6 {
+        width: fit-content;
+        margin: 0 auto;
+        margin-top: 17px;
+        font-family: 'Montserrat';
+        font-style: italic;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    
+    .aboutus h2 {
+        width: fit-content;
+        margin: 12px auto;
+        font-family: 'Montserrat';
+        font-size: 16px;
+        font-weight: 700;
+    }
+    
+    .longline {
+        width: 133px;
+        border: 1.5px solid #E479F3;
+        margin: 0 auto;
+    }
+    
+    .shortline {
+        width: 62px;
+        border: 1.5px solid #E479F3;
+        margin: 0 auto;
+        margin-top: 4px;
+    }
+    
+    .mothercard {
+        width: fit-content;
+        height: fit-content;
+        margin: 16px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    
+    .card {
+        width: 330px;
+        height: 460px;
+        border: 1px solid #b6b6b6;
+        background-color: #f9f9f9;
+    }
+    #cardimage1, #cardimage2, #cardimage3 {
+        background-size: cover;
+        height: 217px;
+        width: inherit;
+    }
+    #cardimage1{
+        background-image: url('./Resources/image\ 1.png');
+    }
+    #cardimage2{
+        background-image: url('./Resources/image\ 2.png');
+    }
+    #cardimage3{
+        background-image: url('./Resources/excursion.png');
+    }
+    .card h6 {
+        font-family: 'Montserrat';
+        margin-top: 16px;
+        font-style: normal;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 700;    
+    }
+    .card p {
+        font-size: 14px;
+        font-family: "Montserrat";
+        text-align: center;
+        font-weight: 400;
+        width: 283px;
+        height: 153px;
+        margin: 0 auto;
+        margin-top: 13px;
+        color: #212121;
+    }
+    #WelcomeAddress{
+        width: 336px;
+        padding: 0px 42px;
+        margin: 0 auto;
+        margin-top: 48px;
+    
+    }
+    #WelcomeAddress h2{
+         font-family: "Montserrat";
+         font-size: 20px;
+         width: 212px;
+         margin: 0;
+         color: #E479F3;
+    }
+    
+    
+    #WelcomeAddress article{
+        width: 336px;
+        height: fit-content;
+        font-size: 14px;
+        display: block;
+    }
+
+    #WelcomeAddress img{
+        width: 100%;
+        margin-top: 32px;
+        display: block; 
+    }
+
+    #flex {
+        margin-top: 24px;
+        display: block;
+    }
+
+    #facilities{
+        width: 343px;
+        margin: 0 auto;
+        margin-top: 32.5px;
+        text-align: center;
+        font-family: 'Montserrat';
+    }
+
+    #facilities h6 {
+        font-weight: 500;
+        font-size: 14px;
+        font-style: italic;
+    }
+    
+    #facilities h3 {
+        font-weight: 700;
+        font-size: 16px;
+        margin-top: 12px;
+    }
+    
+    .motherlab {
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+        justify-content: center;
+        margin: 0 auto;
+        margin-top: 13px;
+    }
+    
+    .labcard {
+        width: 343px;
+        height: 361px;
+        display: flex;
+        flex-direction: column-reverse;
+        flex-shrink: 0;
+    }
+    
+    .computerlab  {
+        background-image: url("./Resources/computerlabsmall.png");
+        height: 186px;
+        width: 100%;
+        background-size: cover;
+    }
+    
+    .sciencelab {
+        background-image: url("./Resources/sciencelabsmall.png");
+        height: 186px;
+        width: 100%;
+        background-size: cover;
+    }
+    
+    .labcardtextbox{
+        height: 175px;
+        width: 100%;
+        background-color: #EEF3F6;
+    }
+    .labcardtextbox p{
+        margin-top: 21px;
+        font-size: 14px;
+        font-family: 'Montserrat';
+        font-weight: 700;
+    }
+    .labcardtextbox article{
+        font-size: 14px;
+        font-family: 'Montserrat';
+        font-weight: 400;
+        width: 303px;
+        margin: 0 auto;
+        margin-top: 17px;
+        text-align: left;
+    }
+    #facilities button{
+        background-color: #E479F3;
+        width: 128px;
+        height: 40px;
+        border-radius: 40px;
+        margin-top: 24px;
+        font-family: "Montserrat";
+        font-size: 12px;
+        font-weight: 400;
+        margin-bottom: 24px;
+    
+    }
+    #Testimonials{
+        width: 100%;
+        background-color: #4a4a4a;
+    }
+    #Testimonials p{
+     color: #ffffff;
+     width: fit-content;
+     margin: 0 auto;
+     margin-top: 24px;
+     font-family: 'Montserrat';
+     font-size: 14px;
+     font-style: italic;
+     font-weight: 500;
+    }
+    #Testimonials h3{
+        width: 343px;
+        height: fit-content;
+        margin: 0 auto;
+        margin-top: 12px;
+        color: #ffffff;
+        font-family: 'Montserrat';
+        font-weight: 700;
+        font-size: 16px;
+        text-align: center;
+        line-height: 18.5px;
+    }
+    
+    #Testimonials ul {
+        height: fit-content;
+        margin: 0 auto;
+        margin-top: 24px;
+        display: block;
+    }
+    
+    #Testimonials ul li {
+        color: white;
+        font-size: 16px;
+        font-weight: 700;
+        font-style: italic;
+    }
+    
+    #Testimonials ul li:hover {
+        cursor: pointer;
+    }
+    .testimonialswrapper {
+        width: inherit;
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+    }
+    
+    .testimonialswrapper::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .MTestimonialcardswrapper {
+        width: inherit;
+        position: relative;
+        flex-shrink: 0;
+    }
+    .MTestimonialcards{
+        margin: 0 auto;
+        margin-top: 32px;
+        margin-bottom: 49px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 32px;
+        width: inherit;
+        flex-shrink: 0;
+        scroll-snap-align: center;
+        overflow-x: scroll;
+        position: relative;
+        top: 0px;
+    }
+    
+    .MTestimonialcards::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .testbuttons {
+        height: 80px;
+        width: 80px;
+        flex-shrink: 0;
+        border-radius: 50%;
+        color: white;
+        background-color: #4a4a4a20;
+        font-size: 40px;
+        z-index: 5;
+        display: none;
+    }
+    
+    #testright, #testright2 {
+        position: sticky;
+        left: 90%;
+        top: 50%;
+        border: 2px solid #E479F3a0;
+    }
+    
+    #testleft, #testleft2 {
+        position: sticky;
+        left: 5%;
+        top: 50%;
+        border: 2px solid #E479F3a0;
+    }
+    .Testimonialcard{
+        width: 329px;
+        height: fit-content;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    
+    }
+    
+    .Testimonialcard .circle{
+        margin: 0 auto;
+        margin-top: 24px;
+        width: 103px;
+        height: 103px;
+        border-radius: 50%;
+        background-color: #D9D9D9;
+        background-size: cover;
+        flex-shrink: 0;
+    
+    }
+    
+    #parent1 {
+        background-image: url('./Resources/parent1.png');
+    }
+    
+    #parent2 {
+        background-image: url('./Resources/parent2.png');
+    }
+    
+    #parent3 {
+        background-image: url('./Resources/parent3.png');
+    }
+    
+    #alum1 {
+        background-image: url('./Resources/alum1.png');
+    }
+    
+    #alum2 {
+        background-image: url('./Resources/alum2.png');
+    }
+    
+    #alum3 {
+        background-image: url('./Resources/alum3.png');
+    }
+    .MTestimonialcards .Testimonialcard p#comment{
+        margin: 0 auto;
+        margin-top: 24px;
+        width: 266px;
+        text-align: center;
+        color: #212121;
+        font-style: italic;
+        font-family: 'Montserrat';
+        line-height: 23px;
+        font-size: 14px;
+    }
+    
+    #comment span {
+        color: #E479F3;
+    }
+    .MTestimonialcards .Testimonialcard img {
+        display: block;
+        width: 175px;
+        height: 24px;
+        margin: 0 auto;
+        margin-top: auto;
+        margin-bottom: 12px;
+    }
+    #Exams{
+        width: 100%;
+    }
+    #Exams h3{
+        font-family: 'Montserrat';
+        width: 343px;
+        font-size: 16px;
+        font-weight: 700;
+        margin: 0 auto;
+        margin-top: 48px;
+        text-align: center;
+    }
+    #Exams .examlogos {
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto;
+        justify-content: center;
+        margin-top: 47px;
+        gap: 23px;
+        margin-bottom: 37px;
+    }
+    #Exams .examlogos .logo{
+        height: 63px;
+        width: 63px;
+        background-size: contain;
+        background-repeat:no-repeat;
+    
+    
+    
+    }
+    #logo1{
+        background-image: url('./Resources/waec.png');
+    }
+    #logo2{
+        background-image: url('./Resources/Neco.png');
+    
+    }
+    #logo3{
+        background-image: url('./Resources/Jamb.png');
+    }
+    #logo4{
+        background-image: url('./Resources/Junior\ waec.png');
+    }
+    
+    footer {
+        width: 100%;
+        background-color: #212121;
+        margin: 0 auto;
+    }
+    
+    footer .links {
+        margin: 0 auto;
+        margin-left: 19px;
+        margin-top: 21px;
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        gap: 50px;
+    }
+    
+    footer .badge {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        width: fit-content;
+        flex-shrink: 0;
+    }
+    
+    footer .badge:hover {
+        cursor: pointer;
+    }
+    
+    footer .badge .img {
+        background-image: url(./Resources/kdc\ bag.png);
+        background-size: cover;
+        width: 72px;
+        height: 72px;
+    }
+    
+    footer .badge p {
+        margin-top: 12px;
+        width: fit-content;
+    }
+
+    footer .links .quicklinks {
+        display: block;
+        flex-shrink: 0;
+        height: 200px;
+    }
+    
+    footer .links .quicklinks ul{
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        margin-top: 0;
+        float: left;
+        gap: 0;
+        row-gap: 24px;
+        padding: 0;
+    }
+    
+    footer .links .quicklinks ul li {
+        margin-left: 0;
+    }
+    
+    footer .links .quicklinks ul a {
+        text-decoration: none;
+        color: #ffffff;
+        margin-left: 0;
+        text-align: left;
+    }
+    
+    footer .links h3 {
+        font-size: 14px;
+        font-family: "Montserrat";
+        font-weight: 700;
+        color: #E479F3;
+        margin-bottom: 16px;
+    }
+    
+    footer .links img {
+        width: 20px;
+        height: 20px;
+        margin-right: 16px;
+    }
+    
+    footer .links p {
+        color: #ffffff;
+        display: inline-block;
+        font-size: 14px;
+        font-family: "Montserrat";
+        width: 301px;
+        line-height: 17px;
+        margin-bottom: 22px;
+    }
+    
+    .developers {
+        font-family: "Montserrat";
+        font-size: 12px;
+        font-style: italic;
+        width: fit-content;
+        margin: 0 auto;
+        margin-top: 12px;
+        margin-bottom: 5px;
+        color: #E479F3;
+    }
+    
+    .copyright {
+        width: fit-content;
+        margin: 0 auto;
+        color: #ffffff;
+        font-size: 16px;
+        margin-top: 91px;
+    }
+    
 }

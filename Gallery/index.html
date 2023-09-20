@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900|Ubuntu:400,500,700"
         rel="stylesheet" />
     <title>King David College</title>
+    <link rel="shortcut icon" href="../Resources/kdc bag.png" type="image/x-icon">
 </head>
 
 <body>
@@ -171,7 +172,7 @@
         }
     }
 
-    const gallerypics = ['../Resources/PRIMARY 1.png', '../Resources/gallery1.png', '../Resources/gallery2.png', '../Resources/gallery3.png', '../Resources/gallery4.png', '../Resources/gallery5.png']
+    const gallerypics = ['../Resources/bootcamp9.png', '../Resources/gallery1.png', '../Resources/gallery2.png', '../Resources/gallery3.png', '../Resources/gallery4.png', '../Resources/gallery5.png']
     gallerypics.forEach((pic, index) => {
         const slide = document.createElement('div')
         slide.classList.add('slide')
@@ -189,6 +190,8 @@
         })
         document.getElementById('galleryslider').appendChild(slide)
     })
+
+    document.getElementById('galleryslider').children[0].click()
 
 </script>
 

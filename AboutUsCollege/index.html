@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900|Ubuntu:400,500,700"
         rel="stylesheet" />
     <title>College | King David College</title>
+    <link rel="shortcut icon" href="../Resources/kdc bag.png" type="image/x-icon">
 </head>
 
 <body>
@@ -106,36 +107,47 @@
                     <p><span>General Studies:</span> English, General Mathematics, Civic Education.</p>
                 </div>
                     <div class="subjects">
-                    <h6>OUR CURRICULUM</h6>../AboutUsCollege/index.html">About Us</a></li>
-                        <li><a href="../Gallery/index.html">Our Gallery</a></li>
-                        <li><a href="../ContactUs/index.html">Contact Us</a></li>
-                    </ul>
-
-                </div>
-                <div class="contact">
-                    <h3>Contact </h3>
-                    <div class="location">
-                        <img src="../Resources/location-pin 1.png">
-                        <p>No. 9 Maxwell Okene Street Pipeline Rumuokwurusi Port Harcourt Rivers State</p>
-                    </div>
-                    <div class="contact">
-                        <img src="../Resources/phone-call 1.png">
-                        <p>0806 422 8446</p>
-                    </div>
-                    <div class="email">
-                        <img src="../Resources/email (1) 1.png">
-                        <p>Kingdavidcollege3@yahoo.com</p>
-                    </div>
-                </div>
-            </div>
-            <p class="copyright">©2023 - KDC - All rights reserved</p>
-            <p class="developers">Developed by the coding students of King David College</p>
-        </footer>
+                    <h6>OUR CURRICULUM</h6>
+                    <footer>
+                        <div class="links">
+                            <div class="badge" onclick="logoClick()">
+                                <div class="img"></div>
+                                <p>“King David College…A PLACE TO BE”</p>
+                            </div>
+                            <div class="quicklinks">
+                                <h3>Quick Links</h3>
+                                <ul>
+                                    <li><a href="../index.html">Home</a></li>
+                                    <li><a href="../AboutUsCollege/index.html">About Us</a></li>
+                                    <li><a href="../Gallery/index.html">Our Gallery</a></li>
+                                    <li><a href="../ContactUs/index.html">Contact Us</a></li>
+                                </ul>
+            
+                            </div>
+                            <div class="contact">
+                                <h3>Contact </h3>
+                                <div class="location">
+                                    <img src="../Resources/location-pin 1.png">
+                                    <p>No. 9 Maxwell Okene Street Pipeline Rumuokwurusi Port Harcourt Rivers State</p>
+                                </div>
+                                <div class="contact">
+                                    <img src="../Resources/phone-call 1.png">
+                                    <p>0806 422 8446</p>
+                                </div>
+                                <div class="email">
+                                    <img src="../Resources/email (1) 1.png">
+                                    <p>Kingdavidcollege3@yahoo.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="copyright">©2023 - KDC - All rights reserved</p>
+                        <p class="developers">Developed by the coding students of King David College</p>
+                    </footer>
     </main>
 </body>
 <script type="text/javascript">
     const logoClick = () => {
-        window.open('./index.html', '_self')
+        window.open('../index.html', '_self')
     }
     let navIcons = document.getElementsByTagName('li')
     for (let i = 0; i < navIcons.length; i++) {
