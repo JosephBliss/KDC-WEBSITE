@@ -12,6 +12,15 @@
 </head>
 
 <body>
+    <div class="sandwichmenu">
+        <button id="close"></button>
+        <ul>
+          <a href="../index.html"><li>Home</li></a>
+          <a href="../AboutUsCollege/index.html"><li>About Us</li></a>
+          <a href="../Gallery/index.html"><li>Our Gallery</li></a>
+          <a href="../ContactUs/index.html"><li>Contact Us</li></a>
+        </ul>
+      </div>
     <nav>
         <img src="../Resources/kdc bag.png" onclick="logoClick()">
         <ul>
@@ -31,6 +40,7 @@
                 <li>CONTACT US</li>
             </a>
         </ul>
+        <button id="sandwichbutton"></button>
     </nav>
     <main>
         <div class="banner">
@@ -212,9 +222,23 @@ We understand the importance of staying connected to the global landscape. Throu
     const logoClick = () => {
     window.open('../index.html', '_self')
   }
+
+  document.getElementById('sandwichbutton').addEventListener('click', () => {
+    document.getElementsByClassName('sandwichmenu')[0].classList.toggle('active')
+  })
+  document.getElementById('close').addEventListener('click', () => {
+    document.getElementsByClassName('sandwichmenu')[0].classList.toggle('active')
+  })
+  document.addEventListener('click', ({target}) => {
+    if(target != document.getElementById('sandwichbutton') && !document.getElementsByClassName('sandwichmenu')[0].contains(target)) {
+      document.getElementsByClassName('sandwichmenu')[0].classList.remove('active')
+    }
+  })
+
+
   let navIcons = document.getElementsByTagName('li')
     for (let i = 0; i < navIcons.length; i++) {
-        if (navIcons[i].textContent === 'ABOUT US') {
+        if (navIcons[i].textContent.toLocaleUpperCase() === 'ABOUT US') {
             navIcons[i].style.color = '#E479F3'
         }
     }

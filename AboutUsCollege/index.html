@@ -12,6 +12,15 @@
 </head>
 
 <body>
+    <div class="sandwichmenu">
+        <button id="close"></button>
+        <ul>
+          <a href="../index.html"><li>Home</li></a>
+          <a href="../AboutUsCollege/index.html"><li>About Us</li></a>
+          <a href="../Gallery/index.html"><li>Our Gallery</li></a>
+          <a href="../ContactUs/index.html"><li>Contact Us</li></a>
+        </ul>
+      </div>
     <nav>
         <img src="../Resources/kdc bag.png" onclick="logoClick()">
         <ul>
@@ -31,6 +40,7 @@
                 <li>CONTACT US</li>
             </a>
         </ul>
+        <button id="sandwichbutton"></button>
     </nav>
     <main>
         <div class="banner">
@@ -40,7 +50,7 @@
                     <span><a id="college" href="./index.html">
                             <li>College</li>
                         </a></span>
-                    <a href="../AboutUsCot/index.html">
+                    <a href="../AboutUsCot/index.html" id="cot">
                         <li>Cot</li>
                     </a>
                 </ul>
@@ -247,22 +257,35 @@
             <p class="copyright">©2023 - KDC - All rights reserved</p>
             <p class="developers">Developed by the coding students of King David College</p>
         </footer>
->>>>>>> d46f6bc9f0358211787141f097f7569dcad37a02
+
     </main>
 </body>
 <script type="text/javascript">
     const cot = document.getElementById('cot');
     console.log(cot)
     const college = document.getElementById('college');
-    college.style.color = "#ffffff";
-    cot.style.color = "#E479F3";
+    cot.style.color = "#ffffff";
+    college.style.color = "#E479F3";
     const logoClick = () => {
         window.open('../index.html', '_self')
     }
+
+    document.getElementById('sandwichbutton').addEventListener('click', () => {
+    document.getElementsByClassName('sandwichmenu')[0].classList.toggle('active')
+  })
+  document.getElementById('close').addEventListener('click', () => {
+    document.getElementsByClassName('sandwichmenu')[0].classList.toggle('active')
+  })
+  document.addEventListener('click', ({target}) => {
+    if(target != document.getElementById('sandwichbutton') && !document.getElementsByClassName('sandwichmenu')[0].contains(target)) {
+      document.getElementsByClassName('sandwichmenu')[0].classList.remove('active')
+    }
+  })
+
     let navIcons = document.getElementsByTagName('li')
 
     for (let i = 0; i < navIcons.length; i++) {
-        if (navIcons[i].textContent === 'ABOUT US') {
+        if (navIcons[i].textContent.toLocaleUpperCase() === 'ABOUT US') {
             navIcons[i].style.color = '#E479F3'
         }
     }
