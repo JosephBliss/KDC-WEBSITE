@@ -8,6 +8,10 @@ body {
     width: 100%;
 }
 
+.sandwichmenu {
+    display: none;
+}
+
 nav {
     width: 100%;
     height: 72px;
@@ -433,7 +437,6 @@ footer .links p {
     .banner{
         width: 100%;
         height: 284px;
-        background-image: url('../Resources/cot\ banner.png');
         background-size: cover;
         margin: 0 auto;
         margin-top: 64px;
@@ -482,6 +485,126 @@ footer .links p {
         font-size: 14px;
         font-weight: 500;
         margin: 0;
+    }
+
+    .photos {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 42px;
+        background-color: #EEF3F6;
+    }
+    
+    .photos h1 {
+        color: #000000;
+        font-family: "Montserrat";
+        font-weight: 700;
+        font-size: 16px;
+        margin: 0 auto;
+        width: fit-content;
+        margin-top: 32px;
+    }
+    
+    .photos p {
+        font-family: 'Montserrat';
+        font-size: 14px;
+        width: fit-content;
+        margin: 0 auto;
+        margin-top: 16px;
+    }
+    
+    .photos .photoswrapper {
+        width: 338px;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 21px;
+        background-color: white;
+        position: relative;
+    }
+    
+    #sliderleft, #sliderright {
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        top: 120px;
+        color: white;
+        font-size: 100%;
+        border: 2px solid #E479F3;
+        background-color: #4a4a4a;
+        display: none;
+    }
+    
+    #sliderleft {
+        left: 20px;
+    }
+    
+    #sliderright {
+        right: 20px;
+    }
+    
+    .photos .photoswrapper .buttons {
+        position: relative;
+        width: 312px;
+        height: 20px;
+        margin: 0 auto;
+        margin-top: 13px;
+    }
+    
+    .photos .photoswrapper .slider {
+        margin: 0 auto;
+        margin-top: 22px;
+        height: 40px;
+        width: 312px;
+        display: flex;
+        flex-direction: row;
+        overflow-x: scroll;
+        gap: 10px;
+    }
+    
+    .photos .photoswrapper .slider .slide {
+        max-height: inherit;
+        flex-shrink: 0;
+        width: 68px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .photos .photoswrapper .slider .slide:hover {
+        cursor: pointer;
+        border: 2px solid #E479F3;
+    }
+    
+    .photos .photoswrapper .slider::-webkit-scrollbar{
+        display: none;
+    }
+    
+    #prev {
+        left: 0;
+        position: absolute;
+        background: none;
+        font-family: 'Montserrat';
+        font-size: 16px;
+        color: #E479F3;
+        text-decoration: underline;
+    }
+    
+    #next {
+        position: absolute;
+        right: 0;
+        background: none;
+        font-family: 'Montserrat';
+        font-size: 16px;
+        color: #E479F3;
+        text-decoration: underline;
+    }
+    
+    .photoswrapper #bigpic {
+        display: block;
+        margin: 0 auto;
+        margin-top: 26px;
+        margin-bottom: 96px;
+        height: 220px;
+        max-width: 312px;
     }
  
     footer {
