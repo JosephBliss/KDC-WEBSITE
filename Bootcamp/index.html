@@ -17,6 +17,7 @@
         <ul>
           <a href="../index.html"><li>Home</li></a>
           <a href="../AboutUsCollege/index.html"><li>About Us</li></a>
+          <a href="./index.html"><li>Tech Bootcamp</li></a>
           <a href="../Gallery/index.html"><li>Our Gallery</li></a>
           <a href="../ContactUs/index.html"><li>Contact Us</li></a>
         </ul>
@@ -174,6 +175,7 @@
     for (let i = 0; i < navIcons.length; i++) {
         if (navIcons[i].getAttribute('href') === './index.html') {
             navIcons[i].style.color = '#E479F3'
+            navIcons[i].children[0].style.color = '#E479F3'
         }
     }
 

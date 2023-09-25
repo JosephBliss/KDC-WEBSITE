@@ -335,6 +335,7 @@ footer .links p {
         background-color: #212121;
         z-index: 20;
         transition: 0.4s;
+        overflow-y: scroll;
     }
 
     .sandwichmenu.active {
@@ -357,7 +358,8 @@ footer .links p {
         margin-top: 49px;
         display: flex;
         flex-direction: column;
-        gap: 64px;
+        gap: 48px;
+        align-items: center;
     }
 
     .sandwichmenu ul a {

@@ -10,14 +10,16 @@
   <link rel="shortcut icon" href="./Resources/kdc bag.png" type="image/x-icon">
 </head>
 
-<body>
+<body id="root">
   <div class="sandwichmenu">
     <button id="close"></button>
     <ul>
       <a href="./index.html"><li>Home</li></a>
       <a href="./AboutUsCollege/index.html"><li>About Us</li></a>
+      <a href="./Bootcamp/index.html"><li>Tech Bootcamp</li></a>
       <a href="./Gallery/index.html"><li>Our Gallery</li></a>
       <a href="./ContactUs/index.html"><li>Contact Us</li></a>
+      
     </ul>
   </div>
   <nav>
@@ -319,6 +321,10 @@
     window.open('./index.html', '_self')
   }
 
+  if (screen.width <= 1275) {
+    document.getElementById('root').style.width = `${screen.width}px`
+  }
+
   document.getElementById('sandwichbutton').addEventListener('click', () => {
     document.getElementsByClassName('sandwichmenu')[0].classList.toggle('active')
   })
@@ -335,6 +341,9 @@
     for (let i = 0; i < navIcons.length; i++) {
         if (navIcons[i].getAttribute('href') === './index.html') {
             navIcons[i].style.color = '#E479F3'
+            if (navIcons[i].children[0]) {
+              navIcons[i].children[0].style.color = '#E479F3'
+            }
         }
     }
 
